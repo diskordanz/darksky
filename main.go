@@ -23,18 +23,14 @@ var (
 )
 
 func main() {
+
 	conf, err := config.Load()
 	if err != nil {
 		logger.Fatal(err.Error())
 	}
 
-	/*apiURL := os.Getenv(intConf.BaseURL)
-	if apiURL == "" {
-		logger.Fatalf("%s env variable should be provided", intConf.BaseURL)
-	}*/
-
-	exampleIntegration := integration.Init(logger)
-	srv := server.Create(serviceName, serviceVersion, exampleIntegration, conf)
+	darkskyIntegration := integration.Init(logger)
+	srv := server.Create(serviceName, serviceVersion, darkskyIntegration, conf)
 
 	logger.Info("Starting service")
 	if err := srv.WebService.Run(); err != nil {

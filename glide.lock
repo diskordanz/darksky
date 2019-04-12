@@ -1,5 +1,5 @@
-hash: 84b0e15cfcc8cd10cab1aef3f1054ee268d67a6b74412fa0e07f8a393c4ba436
-updated: 2019-04-11T10:14:59.639580358+03:00
+hash: 72a02b5c97499bae333befcfa958ccde4902f10e2fe8f92f142a593c67563cc1
+updated: 2019-04-12T10:23:09.908720165+03:00
 imports:
 - name: github.com/armon/go-metrics
   version: f0300d1749da6fa982027e449ec0c7a145510c3c
@@ -121,6 +121,8 @@ imports:
   version: ba968bfe8b2f7e042a574c888954fccecfa385b4
 - name: github.com/sean-/seed
   version: e2103e2c35297fb7e17febb81e49b312087a2372
+- name: github.com/shawntoffel/darksky
+  version: fab645e6a1f236e595bed14f8c9372f27052fbe7
 - name: github.com/sirupsen/logrus
   version: 8bdbc7bcc01dcbb8ec23dc8a28e332258d25251f
 - name: github.com/xedinaska/int-weather-sdk
