@@ -17,6 +17,7 @@ var darksky *integration.Darksky
 
 func main() {
 	serviceName, serviceVersion := "darksky", "0.0.1"
+
 	ctx = context.Background()
 
 	logger = log.WithFields(log.Fields{

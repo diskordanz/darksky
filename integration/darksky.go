@@ -3,6 +3,7 @@ package integration
 import (
 	"crypto/tls"
 	"net/http"
+	"os"
 
 	"github.com/diskordanz/darksky/config"
 	"github.com/diskordanz/darksky/request"
@@ -26,7 +27,11 @@ func Init(logger *logrus.Entry) *Darksky {
 		},
 	}
 
-	darkskyClient := darksky.NewWithClient(config.APIKey, httpClient)
+	key := os.Getenv(config.APIKey)
+	if key == "" {
+		logger.Fatalf("%s env variable should be provided", config.APIKey)
+	}
+	darkskyClient := darksky.NewWithClient(key, httpClient)
 
 	return &Darksky{
 		Logger: logger,

@@ -21,7 +21,7 @@ func (ds *Darksky) GetWeekWeather(ctx context.Context, req *api.WeekWeatherReque
 
 	response, err := ds.DarkskyClient.Forecast(request)
 	if err != nil {
-		return nil, errors.New(err.Error())
+		return nil, errors.Wrap(err, err.Error())
 	}
 
 	var weather []*api.DateWeatherResponse

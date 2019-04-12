@@ -13,7 +13,7 @@ import (
 func (ds *Darksky) GetSunInfo(ctx context.Context, req *api.SunInfoRequest) (*api.SunInfoResponse, error) {
 	t, err := time.Parse(config.DateFormat, req.Date)
 	if err != nil {
-		return nil, errors.New(err.Error())
+		return nil, errors.Wrap(err, err.Error())
 	}
 
 	request := darksky.ForecastRequest{
@@ -27,7 +27,7 @@ func (ds *Darksky) GetSunInfo(ctx context.Context, req *api.SunInfoRequest) (*ap
 
 	response, err := ds.DarkskyClient.Forecast(request)
 	if err != nil {
-		return nil, errors.New(err.Error())
+		return nil, errors.Wrap(err, err.Error())
 	}
 
 	return &api.SunInfoResponse{

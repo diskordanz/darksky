@@ -29,8 +29,8 @@ func main() {
 		logger.Fatal(err.Error())
 	}
 
-	darkskyIntegration := integration.Init(logger)
-	srv := server.Create(serviceName, serviceVersion, darkskyIntegration, conf)
+	darksky := integration.Init(logger)
+	srv := server.Create(serviceName, serviceVersion, darksky, conf)
 
 	logger.Info("Starting service")
 	if err := srv.WebService.Run(); err != nil {

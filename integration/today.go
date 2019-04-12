@@ -22,7 +22,7 @@ func (ds *Darksky) GetTodayWeather(ctx context.Context, req *api.TodayWeatherReq
 
 	response, err := ds.DarkskyClient.Forecast(request)
 	if err != nil {
-		return nil, errors.New(err.Error())
+		return nil, errors.Wrap(err, err.Error())
 	}
 
 	return &api.TodayWeatherResponse{
