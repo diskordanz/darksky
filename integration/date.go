@@ -21,7 +21,7 @@ func (ds *Darksky) GetWeatherForDate(ctx context.Context, req *api.DateWeatherRe
 		Longitude: darksky.Measurement(req.Longitude),
 		Time:      darksky.Timestamp(t.Unix()),
 		Options: darksky.ForecastRequestOptions{
-			Exclude: config.DateBlocksExclude,
+			Exclude: DateBlocksExclude,
 		},
 	}
 

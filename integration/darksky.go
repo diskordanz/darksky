@@ -11,6 +11,13 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+const (
+	TodayBlocksExclude = "hourly, minutely, alerts, flags"
+	DateBlocksExclude  = "hourly, minutely, alerts, flags"
+	WeekBlocksExclude  = "currently, hourly, minutely, alerts, flags"
+	SunBlocksExclude   = "currently, hourly, minutely, alerts, flags"
+)
+
 type Darksky struct {
 	Logger        *logrus.Entry
 	RequestClient *request.RequestClient

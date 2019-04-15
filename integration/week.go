@@ -15,7 +15,7 @@ func (ds *Darksky) GetWeekWeather(ctx context.Context, req *api.WeekWeatherReque
 		Latitude:  darksky.Measurement(req.Latitude),
 		Longitude: darksky.Measurement(req.Longitude),
 		Options: darksky.ForecastRequestOptions{
-			Exclude: config.WeekBlocksExclude,
+			Exclude: WeekBlocksExclude,
 		},
 	}
 

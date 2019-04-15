@@ -21,7 +21,7 @@ func (ds *Darksky) GetSunInfo(ctx context.Context, req *api.SunInfoRequest) (*ap
 		Longitude: darksky.Measurement(req.Longitude),
 		Time:      darksky.Timestamp(t.Unix()),
 		Options: darksky.ForecastRequestOptions{
-			Exclude: config.SunBlocksExclude,
+			Exclude: SunBlocksExclude,
 		},
 	}
 

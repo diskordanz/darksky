@@ -4,7 +4,6 @@ import (
 	"context"
 	"time"
 
-	"github.com/diskordanz/darksky/config"
 	"github.com/pkg/errors"
 	"github.com/shawntoffel/darksky"
 	"github.com/xedinaska/int-weather-sdk/api"
@@ -16,7 +15,7 @@ func (ds *Darksky) GetTodayWeather(ctx context.Context, req *api.TodayWeatherReq
 		Longitude: darksky.Measurement(req.Longitude),
 		Time:      darksky.Timestamp(time.Now().Unix()),
 		Options: darksky.ForecastRequestOptions{
-			Exclude: config.TodayBlocksExclude,
+			Exclude: TodayBlocksExclude,
 		},
 	}
 
