@@ -12,3 +12,7 @@ import:
   - server
 - package: github.com/shawntoffel/darksky
   version: v1.3.1
+- package: github.com/stretchr/testify
+  version: v1.3.0
+  subpackages:
+  - suite
