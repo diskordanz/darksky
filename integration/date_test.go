@@ -30,11 +30,9 @@ func (s *DateWeatherTestSuite) TestGetDateWeather_Failure() {
 	s.Require().NotNil(err)
 	s.Require().Equal("response from server isn't success", err.Error())
 	s.TeardownTest()
-
 }
 
 func (s *DateWeatherTestSuite) TestGetDateWeather_Success() {
-
 	s.SetupTest()
 	routeMap := map[string]string{
 		"/": "testdata/date_weather_success.json",

@@ -29,11 +29,9 @@ func (s *WeekWeatherTestSuite) TestGetWeekWeather_Failure() {
 	s.Require().NotNil(err)
 	s.Require().Equal("response from server isn't success", err.Error())
 	s.TeardownTest()
-
 }
 
 func (s *WeekWeatherTestSuite) TestGetWeekWeather_Success() {
-
 	s.SetupTest()
 	routeMap := map[string]string{
 		"/": "testdata/week_weather_success.json",

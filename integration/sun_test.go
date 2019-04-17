@@ -31,11 +31,9 @@ func (s *SunInfoTestSuite) TestGetSunInfo_Failure() {
 	s.Require().NotNil(err)
 	s.Require().Equal("response from server isn't success", err.Error())
 	s.TeardownTest()
-
 }
 
 func (s *SunInfoTestSuite) TestGetSunInfo_Success() {
-
 	s.SetupTest()
 	routeMap := map[string]string{
 		"/": "testdata/sun_info_success.json",
@@ -53,7 +51,6 @@ func (s *SunInfoTestSuite) TestGetSunInfo_Success() {
 	s.Require().NoError(err)
 	s.Require().Equal(time.Unix(int64(1547900227), 0), response.Rise)
 	s.Require().Equal(time.Unix(int64(1547935114), 0), response.Set)
-
 	s.TeardownTest()
 }
 

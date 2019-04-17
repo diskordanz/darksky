@@ -30,7 +30,6 @@ func (s *TodayWeatherTestSuite) TestGetTodayWeather_Failure() {
 }
 
 func (s *TodayWeatherTestSuite) TestGetTodayWeather_Success() {
-
 	s.SetupTest()
 	routeMap := map[string]string{
 		"/": "testdata/today_weather_success.json",
@@ -51,7 +50,6 @@ func (s *TodayWeatherTestSuite) TestGetTodayWeather_Success() {
 	s.Require().Equal(70, response.Humidity)
 	s.Require().Equal(4.46, response.WindSpeed)
 	s.Require().Equal(10.0, response.Visibility)
-
 	s.TeardownTest()
 }
 

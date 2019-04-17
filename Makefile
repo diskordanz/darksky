@@ -7,7 +7,6 @@ fmt:
 	goimports -w main.go
 
 test:
-	API_KEY=b04ad8db6f75cbd1a02e6e4c8e1e1272 \
 	go test -v --cover --race -short `glide novendor | grep -v ./proto`
 
 build:

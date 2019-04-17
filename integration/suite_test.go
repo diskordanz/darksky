@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 
 	"github.com/diskordanz/darksky/config"
 	"github.com/diskordanz/darksky/integration"
@@ -26,6 +27,7 @@ func (i *IntegrationTestSuite) SetupTest() {
 	logger := logrus.WithFields(logrus.Fields{
 		"logger": "test",
 	})
+	os.Setenv(config.APIKey, "b04ad8db6f75cbd1a02e6e4c8e1e1272")
 
 	i.app = integration.Init(logger)
 	i.ctx = context.Background()
