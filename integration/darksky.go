@@ -38,6 +38,7 @@ func Init(logger *logrus.Entry) *Darksky {
 	if key == "" {
 		logger.Fatalf("%s env variable should be provided", config.APIKey)
 	}
+
 	darkskyClient := darksky.NewWithClient(key, httpClient)
 
 	return &Darksky{

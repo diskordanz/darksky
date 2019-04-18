@@ -1,0 +1,17 @@
+{
+    "currently": {
+        "time": 1547886304,
+        "summary": "Clear",
+        "humidity": 0.7,
+        "windSpeed": 4.46,
+        "visibility": 10.0
+    }, 
+    "daily": {
+        "data": [
+            {
+                "temperatureMin": 28.78,
+                "temperatureMax": 37.65
+            }
+        ]
+    }
+  }

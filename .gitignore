@@ -34,6 +34,7 @@ htmlcov/*
 .idea/*
 *.iml
 .vsc/
+.vscode/
 
 #Go stuff
 *.so

@@ -26,8 +26,8 @@ func (ds *Darksky) GetWeatherForDate(ctx context.Context, req *api.DateWeatherRe
 	}
 
 	response, err := ds.DarkskyClient.Forecast(request)
-	if err != nil {
-		return nil, errors.Wrap(err, err.Error())
+	if err != nil || response.Currently == nil || response.Daily == nil {
+		return nil, errors.New("response from server isn't success")
 	}
 
 	return &api.DateWeatherResponse{
