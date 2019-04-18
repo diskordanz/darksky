@@ -27,7 +27,7 @@ func (i *IntegrationTestSuite) SetupTest() {
 	logger := logrus.WithFields(logrus.Fields{
 		"logger": "test",
 	})
-	os.Setenv(config.APIKey, "b04ad8db6f75cbd1a02e6e4c8e1e1272")
+	os.Setenv(config.APIKey, "testApi")
 
 	i.app = integration.Init(logger)
 	i.ctx = context.Background()
