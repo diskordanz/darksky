@@ -43,13 +43,14 @@ func (r *RequestClient) Get(ctx context.Context, path string, params url.Values,
 	})
 }
 
-func (r *RequestClient) Post(ctx context.Context, path string, data interface{}, target interface{}) (*request.Call, error) {
+func (r *RequestClient) Post(ctx context.Context, path string, params url.Values, data interface{}, target interface{}) (*request.Call, error) {
 	return r.doRequest(&apiRequest{
 		ctx:    ctx,
 		method: http.MethodPost,
 		path:   path,
 		data:   data,
 		target: target,
+		params: params,
 	})
 }
 
