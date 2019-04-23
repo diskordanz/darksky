@@ -55,7 +55,7 @@ func main() {
 			Consumes(restful.MIME_JSON).
 			Produces(restful.MIME_JSON)
 
-		restfulService.Route(restfulService.POST("/weather/update").To(weatherPushHandler.GetCurrentWeather))
+		restfulService.Route(restfulService.POST("/weather/update").To(weatherPushHandler.ReceiveCurrentWeather))
 		srv.WebRouter.Add(restfulService)
 	}
 
