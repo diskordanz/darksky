@@ -1,0 +1,8 @@
+{ 
+    "state_name": "Clear",
+    "humidity": 70,
+    "wind_speed": 4.46,
+    "visibility": 10.0, 
+    "min_temp": 28.78,
+    "max_temp": 37.65        
+}
