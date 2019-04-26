@@ -1,5 +1,5 @@
 hash: 7adaafe9b546c6d7b2b756ee85596a4748f2d5d099eeadfded8b448abec07c43
-updated: 2019-04-16T13:13:29.659712706+03:00
+updated: 2019-04-26T16:19:31.918021234+03:00
 imports:
 - name: github.com/armon/go-metrics
   version: f0300d1749da6fa982027e449ec0c7a145510c3c
@@ -128,6 +128,8 @@ imports:
 - name: github.com/stretchr/testify
   version: ffdc059bfe9ce6a4e144ba849dbedead332c6053
   subpackages:
+  - assert
+  - require
   - suite
 - name: github.com/xedinaska/int-weather-sdk
   version: 9e47303a131d77ad4ebfefe5c5bf05292c5aec36
@@ -169,4 +171,12 @@ imports:
   - unicode/norm
 - name: gopkg.in/fatih/set.v0
   version: 2c768e3c5489976167bfc42b5c7c92ca783f4389
-testImports: []
+testImports:
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: 5d4384ee4fb2527b0a1256a821ebfc92f91efefc
+  subpackages:
+  - difflib
