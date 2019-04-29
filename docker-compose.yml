@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  notifier:
+    image: notifier:latest
+    environment: 
+    - API_URL=http://localhost:8002
+    - API_KEY=b04ad8db6f75cbd1a02e6e4c8e1e1272
+    container_name: notifier
+    network_mode: "host"
+    
+  darksky:
+    image: darksky:latest
+    environment: 
+    - MICRO_SERVER_ADDRESS=:8002
+    - API_KEY=b04ad8db6f75cbd1a02e6e4c8e1e1272
+    - ENABLE_WEATHER_PUSH_REQUESTS=true
+    ports:
+    - "8002:8002"
+    container_name: darksky
